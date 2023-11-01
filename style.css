@@ -1,4 +1,4 @@
-/* Общие стили */
+
 * {
   box-sizing: border-box;
 }
@@ -13,7 +13,6 @@ body {
 }
 
 
-/* Шрифты */
 @font-face {
   font-family: "Anonymous Pro";
   src: url(fonts/AnonymousPro-Bold.ttf);
@@ -69,7 +68,7 @@ header {
   flex-direction: row;
   list-style: none;
   padding: 0;
-  margin: 50px 157px 40px;
+  margin: 50px 230px 40px;
 }
 
 .social-list li a {
@@ -167,7 +166,6 @@ header {
   margin: 0px;
 }
 
-/* Footer */
 .footer {
   background: var(--black, #121723);
   width: 100%;
@@ -176,7 +174,7 @@ header {
 }
 
 .footer_container {
-  width: 1160px;
+  width: 1230px;
   display: flex;
   margin: 33px auto;
   justify-content: space-between;
@@ -207,6 +205,7 @@ header {
   top: 70%;
   align-items: center;
   background: rgba(230, 232, 236, 0.40);
+  width: 1230px;
 }
 
 .disc {
@@ -227,7 +226,6 @@ header {
   justify-content: center;
 }
 
-/* Стили для контейнеров и кроссовок */
 .all-container {
   display: flex;
   flex-direction: column;
@@ -237,16 +235,20 @@ header {
 
 .sneaker-container {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.group {
-  display: flex;
   flex-direction: row;
   align-items: flex-start;
   gap: 24px;
+  margin-bottom: 24px; 
 }
+
+.sneaker {
+  flex: 1; 
+  padding: 12px;
+  background-color: white;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
 
 .sneaker>img {
   border-radius: 12px 12px 0px 0px;
@@ -311,3 +313,5 @@ header {
   margin-right: 8%;
   width: 767px;
 }
+
+
