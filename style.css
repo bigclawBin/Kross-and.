@@ -1,4 +1,4 @@
-
+/* Общие стили */
 * {
   box-sizing: border-box;
 }
@@ -13,6 +13,7 @@ body {
 }
 
 
+/* Шрифты */
 @font-face {
   font-family: "Anonymous Pro";
   src: url(fonts/AnonymousPro-Bold.ttf);
@@ -68,7 +69,7 @@ header {
   flex-direction: row;
   list-style: none;
   padding: 0;
-  margin: 50px 230px 40px;
+  margin: 50px 157px 40px;
 }
 
 .social-list li a {
@@ -99,7 +100,10 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  margin: 0;
+  padding: 0; 
+  gap: 24px; 
+  
 }
 
 /* Карточки */
@@ -122,6 +126,7 @@ header {
   font-style: normal;
   font-weight: 500;
   line-height: 100%;
+  justify-content: center
 }
 
 .cards {
@@ -144,6 +149,7 @@ header {
   height: 63.24px;
   flex-shrink: 0;
   margin: 30.18px 0px 16.6px 143px;
+  object-fit: cover;
 }
 
 .name {
@@ -166,6 +172,7 @@ header {
   margin: 0px;
 }
 
+/* Footer */
 .footer {
   background: var(--black, #121723);
   width: 100%;
@@ -174,7 +181,7 @@ header {
 }
 
 .footer_container {
-  width: 1230px;
+  width: 1160px;
   display: flex;
   margin: 33px auto;
   justify-content: space-between;
@@ -205,7 +212,6 @@ header {
   top: 70%;
   align-items: center;
   background: rgba(230, 232, 236, 0.40);
-  width: 1230px;
 }
 
 .disc {
@@ -226,6 +232,7 @@ header {
   justify-content: center;
 }
 
+/* Стили для контейнеров и кроссовок */
 .all-container {
   display: flex;
   flex-direction: column;
@@ -235,20 +242,18 @@ header {
 
 .sneaker-container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 24px; 
+  justify-content: flex-start; 
+  width: 1161px;
+}
+
+.group {
+  display: flex;
   flex-direction: row;
   align-items: flex-start;
   gap: 24px;
-  margin-bottom: 24px; 
 }
-
-.sneaker {
-  flex: 1; 
-  padding: 12px;
-  background-color: white;
-  border-radius: 12px;
-  margin-bottom: 24px;
-}
-
 
 .sneaker>img {
   border-radius: 12px 12px 0px 0px;
@@ -257,6 +262,7 @@ header {
   height: 254px;
   align-items: flex-start;
   background: white;
+  object-fit: cover;
 }
 
 .about {
@@ -310,8 +316,46 @@ header {
   font-style: normal;
   font-weight: 700;
   line-height: 100%;
-  margin-right: 8%;
-  width: 767px;
+  margin-left: 0;
 }
 
+@media (max-width: 768px) {
+  .header-container, .social-list, .main, .content, .sneaker-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .footer_container{
+    width: 0px;
+  }
+
+  .social-list_footer{
+    padding: 0px;
+  }
+
+  .sneaker-container {
+    justify-content: center;
+  }
+
+  h1, h2, p {
+    font-size: smaller; /* Adjust font size for readability on smaller screens */
+  }
+
+  .social-list li a, .social-list_footer li a {
+    margin-left: 15px; /* Adjust the margin for the social list items */
+  }
+
+  .footer_container, .disc {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo{
+    margin:18px 0px 16.6px 40px;
+  }
+
+  .h1{
+    font-size: 28px;
+  }
+  /* Add more styles as needed */
+}
