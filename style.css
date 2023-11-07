@@ -366,6 +366,7 @@ header {
 
   .sneaker {
     width: 100%; /* Adjusted to take full width */
+    margin-bottom: 24px; /* Keep consistent margin */
   }
 
   .sneaker > img {
